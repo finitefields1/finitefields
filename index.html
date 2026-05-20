@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>My Archive</title>
+
+<style>
+
+
+body {
+    background: #f5f1e8;
+    color: #111;
+
+    font-family: Georgia, serif;
+
+    max-width: 720px;
+    margin: auto;
+
+    padding: 60px 20px;
+
+    line-height: 1.8;
+
+    margin-left: 260px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: normal;
+}
+
+p {
+    margin: 30px 0;
+}
+
+img {
+    width: 50%;
+    margin: 10px 0;
+}
+
+a {
+    color: darkred;
+}
+
+.small {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+.toc {
+    position: fixed;
+
+    top: 60px;
+    left: 40px;
+
+    width: 180px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    opacity: 0.6;
+}
+
+.toc a {
+    display: block;
+
+    color: #444;
+
+    text-decoration: none;
+
+    margin-bottom: 10px;
+}
+
+.toc a:hover {
+    opacity: 1;
+}
+
+.contact {
+    position: top;
+
+    top: 80px;
+    right: 100px;
+
+    width: 460px;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    opacity: 0.75;
+
+    font-family: Georgia, serif;
+
+    letter-spacing: 1px;
+}
+
+
+
+</style>
+
+<script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+    };
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div class="sidebar-left"></div>
+<div class="toc">
+
+    <a href="#quarks">
+        Quarks & Sex
+    </a>
+
+    <a href="#carmichael">
+        A generalisation of Carmichael's totient conjecture
+    </a>
+
+    <a href="#video 1">
+        Video + music #1
+    </a>
+
+    <a href="#video 2">
+        Video + music #2
+    </a>
+
+    <a href="#stacked">
+        Photos: stacked clouds
+    </a>
+
+    <a href="#free art">
+        Free art ideas for any one who wants them
+    </a>
+
+    <a href="#squarefree">
+        A generalisation of a property of squarefree numbers
+    </a>
+
+    <a href="#video 3">
+        Video + music #3
+    </a>
+
+</div>
+
+<div class="contact">
+
+
+Feel free to email me: readelix@gmail.com
+    
+
+</div>
+
+
+<h1>Finite fields archive</h1>
+
+<p class="small">
+<!--notes / images / experiments-->
+</p>
+
+<div class="section">
+<div class="category">
+<!--Writing-->        
+</div>
+<h2 id="quarks">Quarks & Sex, by David Pasino</h2>
+<img src="images/QS_front.jpg">
+<p><!--Six months later, and this great little book is finally printed. Must say I quite like my Latex vibecoded front cover.-->
+A truly great book written by my friend David. 
+<br>
+<br>I found it on OEIS one day as an abandoned and abused pdf. 
+It was in landscape mode written in tiny font and in the middle there was a picture of a dead mouse.
+<br>
+<br>But I read it and I realised it's actually written by a master. Or really, two masters: a master writer and a master mathematician.
+<br>
+<br>I emailed David and said if he'd permit I'd make it look more like a book, and when I'd done so, get it printed and send it to him. He said sure go for it.
+<br>
+<br>So I ran it through latex, managing to vibecode a passable cover in latex too.
+<br>
+<br>And so, six months later, here we have it. 
+<br>
+<br>An amazing book.
+</p>
+
+
+</div>
+
+<hr>
+
+<div class="section">
+<div class="category">
+</div>
+<h2 id="carmichael">A generalisation of Carmichael's totient conjecture</h2>
+<p>Let $M_k$ be the set of rings $\mathbb{Z}/m\mathbb{Z}$ such that $\phi (m) = k$.
+<br>Let $Ab_k$ be the set of abelian groups of order $k$.
+<br>
+<br>Let $f_k : M_k \rightarrow Ab_k$ be the map such that $f_k(\mathbb{Z}/m\mathbb{Z}) = (\mathbb{Z}/m\mathbb{Z})^\times$.
+<br>
+<br>$f_k$ is injective for $m = 2^r$, $r \geq 33$, assuming five Fermat primes.
+<br>
+<br>Computations in PARI haven't been able to find $f_k$ injective for $m$ not a power of $2$. And so I wonder: 
+is $f_k$ non-injective for $m \neq 2^n$?
+<br>
+<br>If this was the case, then this would be a generalisation of Carmichael's totient conjecture, which in the language of
+$f_k$ becomes: if $| \text{im}(f_k) | = 1$ then $| f^{-1}_k(G) | > 1$ for $G$ in $\text{im}(f_k)$.
+<br>
+<br>And the generalisation: if $| \text{im}(f_k) | \geq 1$ then there is at least one $G$ in $\text{im}(f_k)$ such that $| f^{-1}_k(G) | > 1$.
+</p>
+</div>
+
+<hr>
+
+<div class="section">
+<div class="category">      
+</div>
+<h2 id="video 1">Video + music #1</h2>
+<video width="600" controls>
+    <source src="videos/eerie garden.mp4" type="video/mp4">
+</video>
+<p></p>
+</div>
+
+<hr>
+
+<div class="section">
+<div class="category">      
+</div>
+<h2 id="video 2">Video + music #2</h2>
+<video width="600" controls preload="auto">
+    <source src="videos/guitars fluoresce.mp4" type="video/mp4">
+</video>
+<p><!--Apart from the drums, everything here is a guitar.--></p>
+</div>
+
+<hr>
+
+<div class="section">
+<div class="category">      
+</div>
+<h2 id="stacked">Photos: stacked clouds</h2>
+<div style="display: flex; gap: 20px;">
+
+    <img src="images/stacked clouds 1.jpg" style="width: 50%;">
+
+    <img src="images/stacked clouds 2.jpg" style="width: 50%;">
+
+    <!--<img src="images/sky.JPG" style="width: 50%;">-->
+
+</div>
+<p>The shot on the right was the first of this genre of 'stacked clouds over a small subject'. The horizontal is squashed into a 
+    vertical by a combination of minimal foreground and a long depth of field. 
+    <br>I took it not really expecting much, or rather expecting it to be a 'not really what I want but a step in the right direction' kind of thing.  
+    Actually it turned out exactly as I wanted, minus the unintended overexposure (lightmeter battery too high a voltage). The one on the left was a follow up closer to home. 
+<br>I'm going to continue with this, see where it goes.
+</p>
+
+</div>
+
+<hr>
+
+
+
+</div>
+
+<div class="section">
+<div class="category">
+</div>
+<h2 id="free art">Free art ideas give away bonanza for anyone who wants them</h2>
+
+    <img src="images/purple diamond.jpg" style="width: 50%;">
+
+    <img src="images/quad and pol.jpg" style="width: 50%;">
+
+<img src="images/quad.jpg">
+
+<p>I’m writing this for any young (or not so young) eager art-maker who wants a good idea. I used to make a kind of art that I don't any longer.
+    Maybe I'll get back to it in the future (in fact I'm sure I will in some way). But anyway about a year ago I had the thought that
+    it would be a great thing if I could just give people the tricks and techniques I'd found, to see where they could take them. Instead
+    of the memories just atrophying away. Plus a lot of it was more explorations of 'medium', you could say, 
+    rather than making finished pieces. Still, there's no greater freedom than to be free of the dire desire
+    to make capital out of every square inch of your soul.
+<br>
+<br>For about four years from 2020 to 2024 I did a bit of hands-dirty art-making. It culminated in renting a pretty expensive 
+though cheaper than most studio near Willeseden Junction (lightfactory studios: good people and good spaces). I think I was 
+paying something like £850 pm for 440 sqft, which is quite big I suppose, but if you want to make anything big (which was the 
+reason I rented a faraway studio) then you need a big space to do it. (In Hackney you’d probably just get a shared desk 
+for a couple of hours every other weekend for £850 pm.) Not being good at knowing how to actually make money, this didn’t 
+last long; I was there a year and stopped making the kind of things I was making soon after.
+<br>
+<br>But by the end of the four years I’d collected various materials and techniques, and was honing in on a visible form. 
+(And that’s another thing: these materials were expensive; I was probably paying £600 a month on average. Combine that with 
+the rent and it is economically hefty for such a dwindly hope of financial return.) By the end I felt like I worked in purveyance: 
+I had a list of international sources for my materials; I basically had a supply chain (or maybe more like a supply bracelet). Some of them weren’t even for 
+strange things just strange sizes. Like at one point I wanted very wide cellophane, like > 1m, 
+and couldn’t find anything in Europe beyond bulk places. Eventually I found a shop in Australia 
+(Koch & Co) that did I think 120cm at 300m; I paid something like £200 to have this 
+cellophane shipped from Australia to here (got expensive quickly having to pay for the courier and then 
+paying import taxes on top of that). I still have it though; it’ll probably go in my will.
+<br>
+<br> My makings evolved a lot over those four years. I started off making things with resin, first polyester and then epoxy.
+Every time I walk down the street and there's roofers nearby I'm reminded of the hell scent of polyester. The resins eventually resolved
+into a quite interesting epoxy resin technique. I'd build a big wooden mould, and I'd stick those retractable furniture feet on the 
+bottom. Sealing everything up, I'd pour a flat layer of opaque white. After that'd cured, I'd lightly tint clear epoxy with 
+prussian blue oil paint and pour it on top. But this time I'd angle the mould via the retractable feet, making a tiny incline.
+And the effect was quite nice: you'd get this ultra smooth gradient from the light blue at the shallow end to the dark blue at 
+the deep end.
+<br>
+<br><img src="images/mould.jpg">
+<img src="images/mould blue.jpg">
+<img src="images/blue circle.jpg">
+<img src="images/outside.webp">
+<br><br>
+But eventually I got into light. What I ended up making near the end was in essence a disassembled lcd screen. I used pretty much every component 
+of an lcd screen apart from the lcd. The pieces would consist of an array of leds shining light onto a white diffuser. 
+Then I would put various filters and other materials in front of the blank white light and kind of shape it. My favourite 
+was using two linearly polarising filters with a piece of cellophane which I’d warped with a heat gun. Due to the way the 
+cellophane was manufactured (it being stretched into long linearly ordered polymer chains) it was birefringent: place it 
+between two linearly polarised filters and every beautiful bright colour would beam out of it. The colours would shift too 
+depending on viewing angle. 
+<br>
+<br><img src="images/pola circle.webp">
+<img src="images/pola 1.webp">
+<img src="images/pola 2.jpg">
+<img src="images/pola 3.jpg">
+<br><br>
+Diffraction gratings were quite interesting, though I never pursued them much. If you put a 
+diffraction grating over some black strips, the fringes would begin to overlap and you would get some quite nice colour mixes.
+<br>
+<br><img src="images/diff 1.webp">
+<img src="images/diff 2.webp">
+<br><br>
+It’s funny that I stopped since I was still discovering new interesting materials and effects at the end; the ideas weren’t drying up. 
+Brightness enhancing films (which are kind of like flat prisms; I think they are literally hundreds and thousands
+of rows of prisms etched into coated plastic) produced some amazing looking things.
+<br>
+<img src="images/bef 1.jpg">
+<img src="images/bef 2.jpg">
+<img src="images/bef 3.jpg">
+<img src="images/bef 4.jpg"><br>
+<video width="200" controls>
+<source src="videos/bef.mp4" type="video/mp4"></video>
+<br><br>
+The top ones, the geometric ones, were made by placing a bef filter on top of some 3d printed shapes, and so underneath it looked like this
+<br>
+<img src="images/shapes.jpg">
+<br><br>
+I also made these symmetric matrix pieces, that looked quite cool, and were made in a cool way too. 
+By the time I was art-making I was also just getting into math-making. Before I knew any mathematics at all, just basically
+addition and multiplication of integers (yes you can be completely illiterate after passing through the english education system, 
+even to undergrad level), I discovered that if you make a multiplication matrix and iteratively sum the digits in each matrix entry
+until you're left with a digit of the base set, you get some nice repetitive patterns. (I now know that this is because 'iteratively
+summing the digits until left with a base digit' is a homomorphism $f : \mathbb{Z} \rightarrow \mathbb{Z}$, and is essentially 
+the same as the mod function, except where, for a base $b$, the digit $b-1$ acts like $0$. Which is an algebraic explanation of
+why summing the digits of multiples of $9$ in base $10$ always gives $9$.)
+Anyway, I thought these patterns would look good colourised, so I made them in matlab and assigned colours to the numbers.
+I think at some point I accidentally squared the matrix entries before taking the mod, and out came this amazingly intricate 
+symmetric pattern. This was a year or so before I knew what a quadratic residue was. Anyway, what I eventually ended up with 
+was a matrix of quadratic residues mod $n$, and they looked like this
+<br>
+<br>
+<img src="images/quad.jpg">
+<br>
+<br>Here's a list of some of the materials I used and the places I sourced them from:
+<br><b>Polarizing filters</b> (linear and circular): <a href=https://3dlens.com target="_blank">3dlens</a> (also does fresnel lenses and other things)
+<br><b>Diffraction gratings</b>: <a href=https://rainbowsymphony.com target="_blank">Rainbow Symphony</a> (email them for custom sizes, 
+I think they can do any length but have a max width of 500mm)
+<br><b>Brightness enhancement films</b>: aliexpress, just search bef filters.
+<br><b>Lenticular films</b> (didn’t use much but looked interesting): aliexpress, but also found <a href=https://dplenticular.com target="_blank">DPLenticular</a>
+which looked promising but I never used them.
+<br><b>LEDs</b>: from anywhere that did them cheaply enough, though for each order buy from the same place; if you buy multiple reels 
+from amazon then they'll give you reels from different strips, and the light 'temperatures' will be noticeably different, even though
+they're all rated for the same temp.
+<br><b>MDF</b>: from anywhere but Wickes.
+<br><b>Plastic sheets</b> (mainly polycarbonate and acrylic): <a href=https://www.directplastics.co.uk target="_blank">Direct Plastics</a> (I used them
+a lot because I remember they were relatively cheap but also delivered ridiculously quickly, could have been 2 days or maybe 1. A lot of 
+other plastic retailers seemed to be scammy: waiting ages for deliveries; custom cuts done terribly.)
+<br> <b>Cellophane</b>: $\leq 80$cm from amazon, more than that you have to look around (like I did with Koch & Co as mentioned above.) 
+<br>
+<br>
+I haven't used Matlab in about three years so I can't remember the codes I used.
+<br><br>
+Most of what I did was basically sandwiching cellophane between two linearly polarised filters. Near the end the pieces started turning into
+broken up geometric tiling like pieces
+<br>
+<br>
+<img src="images/triangle.jpg">
+<br>
+But I never took it further. I started working with smaller broken up bits instead of large singular pieces because
+it was just such a pain to work with something like 50cm x 80cm polarised film. It's too big to adhere to an acrylic sheet
+without bending it or getting a thousand dust blemishes between the plastic and the film; but without it adhered to something you have to hold the
+loose sheet in tension, which is just flimsy. Working with smaller parts means you can adhere to plastic nicely and easily. You don't
+even have to adhere the film to the plastic, which is good since not all films come with adhesive backing. With such films, 
+you just have to squeeze them between two plastic sheets;
+the thing is, over a certain size you'll get problems like the middle of the sheets will pull away and the film will just flap about
+at that point.
+With smaller sizes sandwiching without adhering works better. 
+</p>
+<hr>
+
+<div class="section">
+<div class="category">
+</div>
+<h2 id="squarefree">A generalisation of a property of squarefree numbers</h2>
+</div>
+<p>It's an elementary fact that we can't have more than four consecutive squarefree numbers: 
+    if we have three consecutive squarefree numbers, then the fourth number will be divisible by 
+four.
+<br>
+<br>
+I was clued in on a way to generalise this a while ago when I discovered the following. Let $k$ be any number and let $D_k$ be
+the density of numbers $n$ in $\mathbb{N}$ such that <b>both</b> $n$ and $n+k$ are squarefree. Let $u_k$ denote the number of non-unitary prime 
+factors of $k$. Then $D_k > D_m$ if $u_k > u_m$.   
+<br>
+<br>
+I'm not going to prove that here. But it made me think about what properties of squarefree numbers could be generalised
+by considering the squarefree numbers themselves as the base case of $0$ non-unitary prime divisors.
+<br>
+<br>
+It turns out that the elementary fact above is one that can be generalised. So the question became: if starting from a number 
+$r$ with $k$ non-unitary divisors, is there a longest 'run' of squarefree numbers? But now we have to define what we mean
+by run, because we can't consider consecutive integers, since we can only have three at most. That is, starting from $r$, we can't 
+simply keeping adding $1$ to every subsequent number. Neither can we add any constant. It turns out, quite obviously when you think about
+it, that it's the squarefree numbers themselves that, when they become summands to some initial number $k$, allow us to get 
+arbitrarily long runs of squarefree numbers. Or really, that the set of squarefree numbers constitutes the 'lexicographically earliest'
+set of summands.
+<br>
+<br>
+<a href=https://oeis.org/A389412 target="_blank">A389412</a> gives the length of the run of squarefree numbers when starting at a number $t_n - 1$ 
+where $t_n$ is the $n$-th squarefree number. For example, A389412$(9) = 4$ since the $9$-th squarefree number is $13$, and
+thus we get
+\[12 + 1 = 13\;\;\;\text{is squarefree}\]
+\[12 + 2 = 14\;\;\;\text{is squarefree}\]
+\[12 + 3 = 15\;\;\;\text{is squarefree}\]
+\[12 + 5 = 17\;\;\;\text{is squarefree}\]
+\[12 + 6 = 18\;\;\;\text{is NOT squarefree}\]
+Again, let $r = 28$. Then we get: 
+\[28+1 = 29\;\;\;\text{is squarefree}\]
+\[28+2 = 30\;\;\;\text{is squarefree}\] 
+\[28+3 = 31\;\;\;\text{is squarefree}\]
+\[28+5 = 33\;\;\;\text{is squarefree}\] 
+\[28+6 = 34\;\;\;\text{is squarefree}\]
+\[28+7 = 35\;\;\;\text{is squarefree}\] 
+\[28+10 = 38\;\;\;\text{is squarefree}\]
+\[28+11 = 39\;\;\;\text{is squarefree}\] 
+\[28+13 = 41\;\;\;\text{is squarefree}\]
+\[28+14 = 42\;\;\;\text{is squarefree}\]
+\[28+15 = 43\;\;\;\text{is squarefree}\]
+\[28+17 = 45\;\;\;\text{is NOT squarefree}\] 
+
+So the length of the run starting from $r = 28$ is $11$. Now, both $12$ and $28$ have one non-unitary prime factor, $4$. And 
+it turns out that $11$ is the maximum run length for any $r$ with $1$ non-unitary prime divisor. Note that this is the maximum; 
+all other run lengths less than the maximum can and do occur.
+<br>
+<br>
+<a href=https://oeis.org/A390138 target="_blank">A390138</a> gives the sequence of maximum run lengths starting from a number with $n$ non-unitary 
+prime divisors, $n \geq 0$. There's an abysmally messy proof in there too.
+<br>It begins:
+\[2, 11, 46, 105, 253, 355, 794, 1026, 1509, 2273, 2706, 4347, 5291, 6036, 7411, 9115, 12628, 12677, ... \]
+Which is quite amazing just to think about, I mean that if you start from a number $r$ with $17$ non-unitary prime factors (which
+is obviously a big number, $\geq 3697007364125150395769095287048934090464900 = \prod_{i = 1}^{17}\text{prime}(i)^2$) then it is 
+possible that you can add the first $12677$ squarefree numbers to $r$ before you'll get a number which is not squarefree. 
+(Note also that A390138$(0) = 2$ and not $3$ because in this case the initial number is squarefree and is thus not counted.)
+<br>
+<br>
+Another interesting thing is that so far the square $s$ which necessarily divides the first nonsquarefree number 
+after the maximum run length is $p^2$ for a prime $p$; however it is not proved that $\sqrt{s}$ <it>must</it> be prime. 
+A sufficient condition for $\sqrt{s}$ to always be prime is that the terms in <a href=https://oeis.org/A390241 target="_blank">A390241</a>
+are distinct. This seems to fall into a class of problems where there's no obvious structural reason why 
+it couldn't be the case, just probabilistically it seems unlikely. And because of this it seems like one of those problems which is 
+easy to state but hard to prove (I could be wrong though).
+</p>
+<hr>
+<div class="section">
+<div class="category">      
+</div>
+<h2 id="video 3">Video + music #3</h2>
+<video width="300" controls preload="auto">
+    <source src="videos/sky.mp4" type="video/mp4">
+</video>
+</div>
+
+<hr>
+
+
+
+</body>
+</html>
+
+

@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>My Archive</title>
+<title>Finite fields archive</title>
 
 <style>
 
@@ -147,6 +147,14 @@ a {
         Video + music #3
     </a>
 
+    <a href="#writing 1">
+        Windows and walls
+    </a>
+
+    <a href="#totients">
+        The set of totient values in quadratic integer ring
+    </a>
+
 </div>
 
 <div class="contact">
@@ -170,6 +178,7 @@ Feel free to email me: readelix@gmail.com
 </div>
 <h2 id="quarks">Quarks & Sex, by David Pasino</h2>
 <img src="images/QS_front.jpg">
+<img src="images/QS_inside.jpg">
 <p><!--Six months later, and this great little book is finally printed. Must say I quite like my Latex vibecoded front cover.-->
 A truly great book written by my friend David. 
 <br>
@@ -253,10 +262,23 @@ $f_k$ becomes: if $| \text{im}(f_k) | = 1$ then $| f^{-1}_k(G) | > 1$ for $G$ in
 
 </div>
 <p>The shot on the right was the first of this genre of 'stacked clouds over a small subject'. The horizontal is squashed into a 
-    vertical by a combination of minimal foreground and a long depth of field. 
+    vertical by a combination of minimal foreground and a long depth of field (because, of course, the top of the clouds is actually above my head). 
     <br>I took it not really expecting much, or rather expecting it to be a 'not really what I want but a step in the right direction' kind of thing.  
     Actually it turned out exactly as I wanted, minus the unintended overexposure (lightmeter battery too high a voltage). The one on the left was a follow up closer to home. 
 <br>I'm going to continue with this, see where it goes.
+<br><br>
+(A note here on 'aesthetics'. I don't know if I want to write on this site; when I write I don't write how I write here. 
+This is more of a conversation with no one. But, in relation to the
+next section, and not wanting to write this in a section of its own, I feel this is a good place to put it.
+<br><br> For a while, while I was making the art like below, I always had in the back of my mind a 'significant form' type theory of 
+what makes good art good. That you just had to find the golden combination of the golden elements and you could squueze the sublime
+into a box, breath into it that nectarine pneuma. Practically, it led to the kind of aesthetics below: brightest, biggest, most in your facest. Though
+I stopped way before I achieved any of that; still, that's the way I was going.
+<br><br>
+It's completely stupid way of looking at things, looking back. Good for spectacle, but who wants spectacle? I've got spectacle written
+under my eyelids. What I think now is that it's not a significant form so much as a significant <i>faith</i> that's the binding glue. The artist gives you material that can be made
+into something, but he doesn't give you too much of the something. He makes space for space; he makes solid geometries with a world of holes rather
+than a concrete slurry which fills everything.)
 </p>
 
 </div>
@@ -282,7 +304,7 @@ $f_k$ becomes: if $| \text{im}(f_k) | = 1$ then $| f^{-1}_k(G) | > 1$ for $G$ in
     Maybe I'll get back to it in the future (in fact I'm sure I will in some way). But anyway about a year ago I had the thought that
     it would be a great thing if I could just give people the tricks and techniques I'd found, to see where they could take them. Instead
     of the memories just atrophying away. Plus a lot of it was more explorations of 'medium', you could say, 
-    rather than making finished pieces. Still, there's no greater freedom than to be free of the dire desire
+    rather than making finished pieces. Still, there really is nothing better than to be free of the dire desire
     to make capital out of every square inch of your soul.
 <br>
 <br>For about four years from 2020 to 2024 I did a bit of hands-dirty art-making. It culminated in renting a pretty expensive 
@@ -334,9 +356,10 @@ diffraction grating over some black strips, the fringes would begin to overlap a
 <br><img src="images/diff 1.webp">
 <img src="images/diff 2.webp">
 <br><br>
-It’s funny that I stopped since I was still discovering new interesting materials and effects at the end; the ideas weren’t drying up. 
-Brightness enhancing films (which are kind of like flat prisms; I think they are literally hundreds and thousands
-of rows of prisms etched into coated plastic) produced some amazing looking things.
+It’s funny that I stopped since I was still discovering new interesting materials and effects right up to the end; the ideas weren’t drying up. 
+Brightness enhancing films produced some amazing looking things. (Bef filters are kind of like flat prisms. In fact I think they are pretty 
+much diffraction gratings; I don't know if it's
+just line density which differentiates them)
 <br>
 <img src="images/bef 1.jpg">
 <img src="images/bef 2.jpg">
@@ -356,7 +379,7 @@ even to undergrad level), I discovered that if you make a multiplication matrix 
 until you're left with a digit of the base set, you get some nice repetitive patterns. (I now know that this is because 'iteratively
 summing the digits until left with a base digit' is a homomorphism $f : \mathbb{Z} \rightarrow \mathbb{Z}$, and is essentially 
 the same as the mod function, except where, for a base $b$, the digit $b-1$ acts like $0$. Which is an algebraic explanation of
-why summing the digits of multiples of $9$ in base $10$ always gives $9$.)
+why iteratively summing the digits of multiples of $9$ in base $10$ always gives $9$.)
 Anyway, I thought these patterns would look good colourised, so I made them in matlab and assigned colours to the numbers.
 I think at some point I accidentally squared the matrix entries before taking the mod, and out came this amazingly intricate 
 symmetric pattern. This was a year or so before I knew what a quadratic residue was. Anyway, what I eventually ended up with 
@@ -382,7 +405,11 @@ other plastic retailers seemed to be scammy: waiting ages for deliveries; custom
 <br> <b>Cellophane</b>: $\leq 80$cm from amazon, more than that you have to look around (like I did with Koch & Co as mentioned above.) 
 <br>
 <br>
-I haven't used Matlab in about three years so I can't remember the codes I used.
+A matlab code to generate the matrices is something simple like 
+<pre><code>n = 100; M = [1:n-1]'*[1:n-1]; imagesc(mod(M.^2,n))</pre></code>
+Prime moduli produce the most boring matrices since the kernel of the squaring endomorphism of the residues mod $n$ has the smallest
+order, order $2$, and so there's only one line of symmetry, and you just get quadrants. When the kernel is larger, then you get more
+visible symmetries.  
 <br><br>
 Most of what I did was basically sandwiching cellophane between two linearly polarised filters. Near the end the pieces started turning into
 broken up geometric tiling like pieces
@@ -453,12 +480,13 @@ Again, let $r = 28$. Then we get:
 \[28+17 = 45\;\;\;\text{is NOT squarefree}\] 
 
 So the length of the run starting from $r = 28$ is $11$. Now, both $12$ and $28$ have one non-unitary prime factor, $4$. And 
-it turns out that $11$ is the maximum run length for any $r$ with $1$ non-unitary prime divisor. Note that this is the maximum; 
+it turns out that $11$ is the maximum run length for any $r$ with $1$ non-unitary prime divisor (the proof is in 
+<a href=https://oeis.org/A390138 target="_blank">A390138</a>). Note that this is the maximum; 
 all other run lengths less than the maximum can and do occur.
 <br>
 <br>
 <a href=https://oeis.org/A390138 target="_blank">A390138</a> gives the sequence of maximum run lengths starting from a number with $n$ non-unitary 
-prime divisors, $n \geq 0$. There's an abysmally messy proof in there too.
+prime divisors, $n \geq 0$, again with the proof.
 <br>It begins:
 \[2, 11, 46, 105, 253, 355, 794, 1026, 1509, 2273, 2706, 4347, 5291, 6036, 7411, 9115, 12628, 12677, ... \]
 Which is quite amazing just to think about, I mean that if you start from a number $r$ with $17$ non-unitary prime factors (which
@@ -473,6 +501,20 @@ A sufficient condition for $\sqrt{s}$ to always be prime is that the terms in <a
 are distinct. This seems to fall into a class of problems where there's no obvious structural reason why 
 it couldn't be the case, just probabilistically it seems unlikely. And because of this it seems like one of those problems which is 
 easy to state but hard to prove (I could be wrong though).
+<br>
+<br>
+Proof. 
+<br>
+For every prime $p$ and every residue $r_i \leq p^2 - 1$ there exist infinitely many squarefree numbers of the form 
+$s = k_ip^2 + r_i$, $k \geq 1$. This follows from Dirichlet's theorem.
+<br><br>
+Let $t_i = k_ip^2 + r_i$ be the least such squarefree number for the residue $r_i$, and let $T_p = \{t_1, t_2, ..., t_{p^2-1}\} 
+be the set of the least squarefree numbers for each residue. Finally, let $s_p$ the the greatest element of $T$. 
+<br><br>
+Let $S = \{3_2, 17_3, 74_5, 174_7, ... \}$ be the set of those $s_p$ for every prime $p$. 
+<br><br>
+For any integer $m$ with $n$ non-unitary prime factors, let $Q_m = \{s_{q_1}, s_{q_2}, ..., s_{q_n}\} be the set of those 
+$s_{q_i} \in S$ for each non-unitary prime factor $q_i$ of $m$. The set complement $S\Q_m$ is thus the set of those $s_p$ ...
 </p>
 <hr>
 <div class="section">
@@ -485,6 +527,102 @@ easy to state but hard to prove (I could be wrong though).
 </div>
 
 <hr>
+
+<div class="section">
+<h2 id="writing 1">Windows and walls</h2>
+I haven't been able to fix the window for 3 weeks; the draught is stronger and I care less. 
+I can't bring myself to think of it let alone get to it. To make change from badness to goodness; stick a virtue plaster over 
+the window and say now everything is how it should be. Instead I've been alone in a house that's not mine; it's full of smoke. 
+I don't know where they've gone. If you don't fix something then you just get used to it; but you get used to it more easily if 
+it's yours. If you make it not yours, and you find someone to fix it, then you make and find the opposite: impatience gnaws your bones and 
+keeps you up when you should be down. The season for window-fixing -- for anything-fixing -- was over. Tell them they should 
+try getting used to it; ask them if they've ever thought of that.
+<br><br>
+She was just unpleasant. Too certain of her decisions, she made them for fun. Five-thousand pounds and free tea. But she 
+wouldn't be there. And her husband was unpleasant and wasn't there either. If I could sing I would: the rooms are big enough 
+and empty enough and hard enough that it would make less lonely. It lasted perhaps two days, the engine of my goodwill. And so 
+well-recommended: I was eating the fats and fruits off the string of recent goodwilled actions, actions which won me 
+confidence, won me where I am. I can't even be sure that I've stopped my goodwill for good. It might come back; it might have 
+transformed into a goodwill I just don't understand. Maybe goodwill is a smoke stain and a fridge left open; maybe you just have 
+to look really hard.
+<br><br>
+Three weeks in, soon to be four. I was last seen last week. I'm trapped on purpose: it feels good to know my future. I can't even 
+remember their names. And maybe if I said how I really feel, you'd lose some goodwill too. Because maybe I feel completely different 
+to how I'm telling you. Maybe I care a lot and have just said all this to make you like me more, more than if I was a weak worrier, 
+fearful of my uncontrollable sad destruction. Maybe I watch me destroy me and all future mes at the same time. Maybe I was born with 
+a conscience which was too big. Well either way the outcome's the same; everything else can fall, fail, fade away.
+<br><br>
+Maybe I should tell her that I became ill and that that was the reason why the walls were still floors 
+and the window a hole. If I tell her---I don't know what she'd do. She lives for a house like this. It's too late to pick up from 
+where I left off; I've forgotten where that was.
+<br><br>
+And so I've got no option but to lie here, doing as I'm doing now, every room a room of smoke and ceramic jigsaw. To give no 
+defence and to just fall back in smokey self-ablating worry---I like that.
+</div>
+<hr>
+
+<div class="section">
+<h2 id="totients">The set of totient values in quadratic integer rings</h2>
+If an integer ring is a unique factorisation domain, then all irreducible elements are prime elements. In field extensions with
+base field $\mathbb{Q}$, the codomain of the norm function is $\mathbb{Q}$.
+<br><br>
+The generalised totient function of an integer ring $\mathcal{O}_{\mathbb{Q}[x]}$ is 
+\[N(\alpha) = \prod{(N(\mathfrak{p})-1)N(\mathfrak{p}^{e-1})}\]
+If $p$ is a ramified or split prime in a quadratic $\mathbb{Z}[x]$ then $N(p^e) = \phi(p^e) = (p-1)p^{e-1} = J_1(p^e)$; if $q$ is inert
+then $N(q^f) = (q^2 - 1)q^{2f - 2} = J_2(q^f)$. $J_i$ is Jordan's totient function of degree $i$.
+<br><br>
+Since: 
+<br>- in a UFD irreducible elements are prime elements;
+<br>- the norm of a prime element in a quadratic integer ring is a rational prime;
+<br>- the totient function is (not-completely) multiplicative;
+<br><br>
+we can easily calculate the full set of totient values for any quadratic UFD, because it means we can work backwards from rational primes 
+to prime elements to irreducible elements, and moreover calculate the totient values of rational prime powers and from these generate the
+full set via a multiplication which is not completely multiplicative. If $*(x,y) = x*y$ is our multiplication which is not completely multiplicative,
+then * is a partial binary function since $x*y$ is defined only for those $x,y$ such that $\gcd (x,y) = 1$. The set generated thus becomes
+a partial algebra, maybe something like a partial semigroup.
+<br><br>
+If $\mathbb{Z}[x]$ is not a UFD, then the set generated from the base set $\{N_{\mathbb{Z}[x]}(2), N_{\mathbb{Z}[x]}(3)
+, N_{\mathbb{Z}[x]}(4), N_{\mathbb{Z}[x]}(5), N_{\mathbb{Z}[x]}(7), ...\}$ via $*$ is a proper subset of the full set of 
+totient values, since some irreducible elements are not prime elements, and thus the norms of those non-prime irreducible elements
+would not be rational primes, and so the base set would have to include norms of rational composites.
+<br><br>
+A PARI gp function which lists the set of totient values starting from rational primes, and thus calculates the full set of totient
+values for quadratic UFDs
+<br><br>
+<pre><code>lst_d(lim, d) =
+{
+    my(S = Set([1]), D = nfdisc(x^2 - d));
+    forprime(p = 2, lim,
+        my(L = List(), k = kronecker(D, p));
+        if(D % p == 0 || k == 1,
+            for(e = 1, oo,
+                my(v = p^(e-1) * (p-1));
+                if(v > lim, break);
+                listput(L, v)
+            ),
+            for(e = 1, oo,
+                my(v = (p^2)^(e-1) * (p^2 - 1));
+                if(v > lim, break);
+                listput(L, v)
+            )
+        );
+        my(T = Set(S));
+        for(i = 1, #S,
+            for(j = 1, #L,
+                my(v = S[i] * L[j]);
+                if(v <= lim,
+                    T = setunion(T, Set([v]))
+                )
+            )
+        );
+        S = T;
+    );
+    S
+}
+</code></pre>
+
+</div>
 
 
 

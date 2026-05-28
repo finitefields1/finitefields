@@ -507,7 +507,10 @@ other plastic retailers seemed to be scammy: waiting ages for deliveries; custom
 <br>
 <br>
 A matlab code to generate the matrices is something simple like 
-<pre><code>n = 100; M = [1:n-1]'*[1:n-1]; imagesc(mod(M.^2,n))</pre></code>
+<pre><code>n = 101; M = [1:n-1]'*[1:n-1]; imagesc(mod(M.^2,n))</pre></code>
+In fact, just copy and paste that code into <a href="https://octave-online.net">www.octave-online.net</a>. Here's some example images
+and their corresponding moduli
+<br><br>
 Prime moduli produce the most boring matrices since the kernel of the squaring endomorphism of the residues mod $n$ has the smallest
 order, order $2$, and so there's only one line of symmetry, and you just get quadrants. When the kernel is larger, then you get more
 visible symmetries.  

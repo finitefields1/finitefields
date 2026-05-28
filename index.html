@@ -510,10 +510,20 @@ A matlab code to generate the matrices is something simple like
 <pre><code>n = 101; M = [1:n-1]'*[1:n-1]; imagesc(mod(M.^2,n))</pre></code>
 In fact, just copy and paste that code into <a href="https://octave-online.net">www.octave-online.net</a>. Here's some example images
 and their corresponding moduli
+<img src="images/307.png">
+<p>$n = 307$, prime</p>
+<img src="images/308.png">
+<p>$n = 308 = 2^2 \cdot 7 \cdot 11$</p>
+<img src="images/309.png">
+<p>$n = 309 = 2 \cdot 5 \cdot 31$, squarefree</p>
+<img src="images/311.png">
+<p>$n = 311$, prime</p>
+<img src="images/320.png">
+<p>$n = 320 = 2^6 \cdot 5$</p>
 <br><br>
-Prime moduli produce the most boring matrices since the kernel of the squaring endomorphism of the residues mod $n$ has the smallest
-order, order $2$, and so there's only one line of symmetry, and you just get quadrants. When the kernel is larger, then you get more
-visible symmetries.  
+Matrix look is related to how many quadratic residues are congruent to $1$ mod $n$. That is, the order of the kernel of the squaring 
+endomorphism. If $n$ is prime, then $x^2 \equiv 1 (\mod n)$ only has two solutions, $p$ and $p-1$, and this is visualised in there being
+one, central line of symmetry. Size of kernel is related to prime factorisation of $n$.
 <br><br>
 Most of what I did was basically sandwiching cellophane between two linearly polarised filters. Near the end the pieces started turning into
 broken up geometric tiling like pieces

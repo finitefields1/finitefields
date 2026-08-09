@@ -266,7 +266,7 @@ However.
     It turns out $f_k$ is injective for $k = p 2^s$, for various $s$, and for a lot of primes $p$, which I bet an infinite number of primes.
     <br><br>
     In fact, I'm willing to conjecture (perhaps this is just another hasty one) that the only $p$ such that $f_k$ is noninjective for $k = 
-    p 2^n$, and for all $n \geq 1$, are those $p$ such that there exist two Fermat primes $F_i \leq 65537$ such that $p(F_i - 1) + 1 is prime$.
+    p 2^n$, and for all $n \geq 1$, are those $p$ such that there exist two Fermat primes $F_i \leq 65537$ such that $p(F_i - 1) + 1$ is prime$.
     <br><br>
     Proof:
     <br>
@@ -296,14 +296,13 @@ Since
 $p$ must be a factor in this product. It cannot be one of the factor $q_i^{a_i - 1}$ since then $q_i = p$. But if $p \mid m$ 
     then $p - 1 \mid \phi(m) = p2^u$, and this would force $p -1 = 2^d$ for some $d$, and $p$ would be a Fermat prime, 
     contrary to assumption. Thus $p$ must divide some $q_i -1$. Since $q_i -1 \mid p2^u$ and contains the factor $p$, 
-    it must have the form $q_i - 1= p2^t$, $t \leq u$. Hence $q = p2^t + 1$, and $\phi(q) = p2^t$.% (Note that this 
-    proves that in general if $\phi(m) = p2^r$, then there exists a prime of the form $q = p2^s + 1$, $s \leq r$.) 
+    it must have the form $q_i - 1= p2^t$, $t \leq u$. Hence $q = p2^t + 1$, and $\phi(q) = p2^t$.
 <br><br>
 Since every integer less than $32$ can be written as a sum of elements of the set $\{1,2,4,8,16\}$, there is some 
     subset $ S \subseteq \{1,2,4,8,16\}$ such that
 \[1 \leq \sum_{x \in S} x \leq 31.\]
 Let 
-\[M = q \prod_{x \in S} (2^x + 1).\]% = q \prod_{x \in S} F_i,\]
+\[M = q \prod_{x \in S} (2^x + 1).\]
 <br><br>
 Since $q = p2^t + 1$ is prime, $\phi(q) = p2^t$, $t \leq u$; $\phi(\prod_{x \in S} (2^x + 1)) = 2^u$, $1 \leq u \leq 31$; 
     and thus $\phi(M) = p2^{t+u}$, $1 \leq t+u \leq 31$. Since $M$ is odd, $\phi(M) = \phi(2M)$, 
@@ -317,7 +316,9 @@ Since $q = p2^t + 1$ is prime, $\phi(q) = p2^t$, $t \leq u$; $\phi(\prod_{x \in 
 Combining both arguments, we have proved that if $p$ such that there are at least two Fermat primes $F_i \leq 65537$ such 
     that $p(F_i -1) +1$ is prime, then $f_k$ is noninjective for $k = p2^r$, $r\geq 1$.
 <br><br>
-Fermat primes are special cases that must be treated separately. For the five known Fermat primes $\{3, 5, 17, 257, 65537\}$ it has been found empirically that $17, 257$, and $65537$, are all injective at exponents $111, 17$, and $33$, respectively. %(and thus $257$ is the unique prime which is injective for an exponent less than $32$).
+Fermat primes are special cases that must be treated separately. For the five known Fermat primes 
+    $\{3, 5, 17, 257, 65537\}$ it has been found empirically that $17, 257$, and $65537$, are all 
+    injective at exponents $111, 17$, and $33$, respectively. 
 <br><br>
 $3$ can proved noninjective by the main proof and manual check, since there are two Fermat primes $F_i$ such that $3(F_i -1) + 1$ is prime.
 <br><br>

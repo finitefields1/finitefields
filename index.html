@@ -247,6 +247,92 @@ It was in landscape mode written in tiny font and in the middle there was a pict
 
 <hr>
 
+<div class="section">
+<h2 id="totients">Injectivity of the map $f_k$</h2>
+The generalisation of Carmichael's totient conjecture below was hasty on my part. It is easy to find counter examples.
+<br>
+<br>Again, Let $M_k$ be the set of rings $\mathbb{Z}/m\mathbb{Z}$ such that $\phi (m) = k$, and
+    let $Ab_k$ be the set of abelian groups of order $k$. Then let $f_k : M_k \rightarrow Ab_k$ be the 
+    map such that $f_k(\mathbb{Z}/m\mathbb{Z}) = (\mathbb{Z}/m\mathbb{Z})^\times$.
+<br><br>
+    $f_k$ is injective for $ k = 2^r$, $r \geq 33$. And I conjectured that it was noninjective for all other $k$ not a power of $2$.
+<br><br>
+However. 
+<br><br>
+    It turns out $f_k$ is injective for $k = p 2^s$, for various $s$, and for a lot of primes $p$, which I bet an infinite number of primes.
+    <br><br>
+    In fact, I'm willing to conjecture (perhaps this is just another hasty one) that the only $p$ such that $f_k$ is noninjective for $k = 
+    p 2^n$, and for all $n \geq 1$, are those $p$ such that there exist two Fermat primes $F_i \leq 65537$ such that $p(F_i - 1) + 1 is prime$.
+    <br><br>
+    Proof:
+    <br>
+    Let $p$ be the $j^{\text{th}}$ prime, and let $F_1 = 2^{e_1} + 1$ and $F_2 = 2^{e_2} + 1$ be distinct Fermat primes less than or 
+    equal to $65537$ such that 
+\[q_1 = p(F_1 - 1 ) + 1\] 
+and
+\[q_ 2 = p(F_2 - 1) + 1\] 
+are primes. For $r \geq e_1 + e_2$, define
+\[m_1 = q_1F_2 2^{r - e_1 - e_2 + 1}\] 
+and
+\[m_2 = q_2 F_1 2^{r - e_1 - e_2 + 1},\] 
+then 
+\[\phi(m_1) = p 2^{e_1} 2^{e_2} 2^{r - e_1 - e_2}\] 
+\[= p 2^r  = p 2^{e_2} 2^{e_1} 2^{r - e_1 - e_2} =  \phi(m_2),\]
+and the unit groups $(\mathbb{Z}/m_1\mathbb{Z})^\times$ and $(\mathbb{Z}/m_2\mathbb{Z})^\times$ are isomorphic. 
+    $f_k$ is therefore noninjective for $k = p 2^r$, $r \geq e_1 + e_2$. 
+<br><br>
+The case for $r < e_1 + e_2$ can be proven by a general argument that $f_k$ is noninjective for $k = p2^u$, $1 \leq u \leq 31$, 
+for any prime $p$ which is not a Fermat prime.
+<br><br>
+For prime $q$, let 
+\[m = \prod_i q_i^{a_i}\]
+be an integer such that $\phi(m) = p2^u$. We will show that one of the factors $q$ has the form $q = p2^t + 1$, $t \leq u$.
+Since
+\[\phi(m) = p2^u = \prod_i q_i^{a_i - 1}(q_i -1)\]
+$p$ must be a factor in this product. It cannot be one of the factor $q_i^{a_i - 1}$ since then $q_i = p$. But if $p \mid m$ 
+    then $p - 1 \mid \phi(m) = p2^u$, and this would force $p -1 = 2^d$ for some $d$, and $p$ would be a Fermat prime, 
+    contrary to assumption. Thus $p$ must divide some $q_i -1$. Since $q_i -1 \mid p2^u$ and contains the factor $p$, 
+    it must have the form $q_i - 1= p2^t$, $t \leq u$. Hence $q = p2^t + 1$, and $\phi(q) = p2^t$.% (Note that this 
+    proves that in general if $\phi(m) = p2^r$, then there exists a prime of the form $q = p2^s + 1$, $s \leq r$.) 
+<br><br>
+Since every integer less than $32$ can be written as a sum of elements of the set $\{1,2,4,8,16\}$, there is some 
+    subset $ S \subseteq \{1,2,4,8,16\}$ such that
+\[1 \leq \sum_{x \in S} x \leq 31.\]
+Let 
+\[M = q \prod_{x \in S} (2^x + 1).\]% = q \prod_{x \in S} F_i,\]
+<br><br>
+Since $q = p2^t + 1$ is prime, $\phi(q) = p2^t$, $t \leq u$; $\phi(\prod_{x \in S} (2^x + 1)) = 2^u$, $1 \leq u \leq 31$; 
+    and thus $\phi(M) = p2^{t+u}$, $1 \leq t+u \leq 31$. Since $M$ is odd, $\phi(M) = \phi(2M)$, 
+    and $(\mathbb{Z}/M\mathbb{Z})^\times \cong (\mathbb{Z}/2M\mathbb{Z})^\times$, and therefore $f_k$ is 
+    noninjective for $k = p 2^u$, $ u \leq 31$.
+<br><br>
+(This last part also gives us a proof of the following theorem: for a non-Fermat prime $p$, if $p2^w$ is a totient, 
+    then there exists a $v \leq w$ such that $p2^v + 1$ is prime. Let $s$ be the least exponent such that $p2^s + 1$ is 
+    prime: if $f_k$ is injective for $k = p2^r$, then $r > s$, and $s+1$ is a lower bound for $r$. A corollary is that, if $p$ is the $i^\text{th}$ prime and is a Sierpinski number (i.e. $p2^n + 1$ is composite for every $n \geq1$), then a$(i) = -1$.)
+<br><br>
+Combining both arguments, we have proved that if $p$ such that there are at least two Fermat primes $F_i \leq 65537$ such 
+    that $p(F_i -1) +1$ is prime, then $f_k$ is noninjective for $k = p2^r$, $r\geq 1$.
+<br><br>
+Fermat primes are special cases that must be treated separately. For the five known Fermat primes $\{3, 5, 17, 257, 65537\}$ it has been found empirically that $17, 257$, and $65537$, are all injective at exponents $111, 17$, and $33$, respectively. %(and thus $257$ is the unique prime which is injective for an exponent less than $32$).
+<br><br>
+$3$ can proved noninjective by the main proof and manual check, since there are two Fermat primes $F_i$ such that $3(F_i -1) + 1$ is prime.
+<br><br>
+$5$ is the only Fermat prime which is noninjective and requires a proof of its own.
+<br><br>
+We note that 
+\[5(3 - 1) + 1 = 11.\]
+Since $5 = 2^2 + 1$ is itself a Fermat prime, let 
+\[m_1 = 5 \cdot 11= 55\]
+and
+\[m_2 = 5^2 \cdot 3 = 75.\]
+$\phi(75) = \phi(55)$ and the unit groups $(\mathbb{Z}/55\mathbb{Z})^\times$ and $(\mathbb{Z}/75\mathbb{Z})^\times$ are isomorphic, with
+\[ (\mathbb{Z}/55\mathbb{Z})^\times \cong (\mathbb{Z}/75\mathbb{Z})^\times \cong C_2 \times C_4 \times C_5.\]
+Thus for $k = 5\cdot2^r$, $f_k$ is noninjective for $r \geq 3$. Manual check confirms for $r = 1$ and $2$. 
+
+</div>
+
+<hr>
+
 <h2 id="plants 2">Timelapse of chlorophyll decay in ivy leaf 2</h2>
 
 <a href="images/ivy 2.gif" target="_blank"> <img src="images/ivy 2.gif" style="width:50%;"></a>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Photo Gallery</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #111;
+      background: #fff;
+    }
+
+    header {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    h1 { margin: 0; font-size: 30px; }
+
+    nav { display: flex; gap: 35px; }
+    nav a { color: #222; text-decoration: none; }
+
+    .gallery {
+      max-width: 1100px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .gallery img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    @media (max-width: 1150px) {
+      .header-inner { padding-left: 16px; padding-right: 16px; }
+      .gallery { margin-left: 16px; margin-right: 16px; }
+    }
+
+    @media (max-width: 700px) {
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+      h1 { font-size: 22px; }
+      nav { gap: 14px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body id="home">
+  <header>
+    <div class="header-inner">
+      <h1>My Photo Gallery</h1>
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#photos">Photos</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="gallery" id="photos">
+      <img src="images/photo-01.jpg" alt="Photo 1" loading="lazy">
+      <img src="images/photo-02.jpg" alt="Photo 2" loading="lazy">
+      <img src="images/photo-03.jpg" alt="Photo 3" loading="lazy">
+      <img src="images/photo-04.jpg" alt="Photo 4" loading="lazy">
+      <img src="images/photo-05.jpg" alt="Photo 5" loading="lazy">
+      <img src="images/photo-06.jpg" alt="Photo 6" loading="lazy">
+      <img src="images/photo-07.jpg" alt="Photo 7" loading="lazy">
+      <img src="images/photo-08.jpg" alt="Photo 8" loading="lazy">
+      <img src="images/photo-09.jpg" alt="Photo 9" loading="lazy">
+      <img src="images/photo-10.jpg" alt="Photo 10" loading="lazy">
+      <img src="images/photo-11.jpg" alt="Photo 11" loading="lazy">
+      <img src="images/photo-12.jpg" alt="Photo 12" loading="lazy">
+    </div>
+  </main>
+
+  <footer id="about" style="max-width:1100px;margin:60px auto 30px;padding:0 16px;color:#777;font-size:14px;">
+    A collection of my photos.
+  </footer>
+</body>
+</html>
